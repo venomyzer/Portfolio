@@ -1,16 +1,5 @@
 :root {
-  --color-text-primary: #ffffff;
-  --color-text-secondary: rgba(255, 255, 255, 0.7);
-
-  --font-family-primary: "SF Pro", system-ui, sans-serif;
-
-  --h1-size: 36.46px;
-  --h2-size: 30px;
-  --paragraph-size: 18px;
-
-  --h1-weight: 600;
-  --h2-weight: 600;
-  --paragraph-weight: 500;
+  --sf-pro: "SF Pro", system-ui, sans-serif;
 }
 
 * {
@@ -20,30 +9,10 @@
 }
 
 body {
-  font-family: var(--font-family-primary);
+  font-family: var(--sf-pro);
   background-color: rgba(3, 0, 12, 1);
-  color: var(--color-text-primary);
+  color: white;
 }
 
-h1 {
-  font-size: var(--h1-size);
-  font-weight: var(--h1-weight);
-  color: var(--color-text-primary);
-  word-wrap: break-word;
-}
-
-h2 {
-  font-size: var(--h2-size);
-  font-weight: var(--h2-weight);
-  color: var(--color-text-secondary);
-  word-wrap: break-word;
-}
-p {
-  color: var(--color-text-secondary);
-  font-size: var(--paragraph-size);
-  font-weight: var(--paragraph-weight);
-  font-family: var(--font-family-primary);
-  word-wrap: break-word;
-}
 
 

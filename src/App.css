@@ -1,9 +1,10 @@
 .app {
   min-height: 100vh;
   padding-top: 150px;
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-left: clamp(20px, 10vw, 150px);
+  padding-right: clamp(20px, 10vw, 150px);
 }
+
 .top-accent {
   position: fixed;
   top: 0;
@@ -18,8 +19,14 @@
   box-shadow: 0 5px 20px rgba(123, 47, 247, 0.7);
   z-index: 1000;
 }
+
 .container {
   display: flex;
-  gap: 100px;
-  justify-content: space-between;
+  gap: 80px;
+  justify-content: center;
+}
+@media (max-width: 1400px) {
+  .container {
+    flex-direction: column;
+  }
 }

@@ -1,14 +1,19 @@
 .profile-card {
-    width: 480px;
+    width: 400px;
     background: #09021C;
     border-radius: 24px;
     overflow: hidden;
     position: relative;
 }
+@media (max-width: 1400px) {
+    .profile-card {
+        width: 100%;
+    }
+}
 
 .banner-wrapper {
     width: 100%;
-    height: 200px;
+    height: 170px;
     overflow: hidden;
 }
 .banner-img {
@@ -18,13 +23,14 @@
 }
 
 .card-content {
-    padding: 60px 32px 32px 32px;
+    padding: 50px 32px 10px 32px;
     position: relative;
 }
+
 .avatar-wrapper {
     position: absolute;
     top: -60px;
-    left: 30px;
+    left: 20px;
 }
 .avatar {
     width: 120px;
@@ -40,36 +46,61 @@
     width:20px;
     height: 20px;
     border-radius: 50%;
-    background: #22ff22;
+    background: rgb(0, 218, 15);
 }
 
 .name {
+    font-size: 24px;
+    font-weight: 700    ;
+
     margin-top: 16px;
-    margin-bottom: 0px;
 }
 .alias {
-    margin-top: 0px;
-    opacity: 0.6;
-    font-weight: 600;
-    font-size: 20px;
-    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0.5;
+
+    margin-bottom: 20px;
 }
 
 .roles {
     display: flex;
-    gap: 16px;
+    gap: 8px;
+}
+@media (max-width: 497px) {
+    .roles {
+        flex-direction: column;
+    }
 }
 .role {
-    padding: 8px 16px;
-    border: 2px solid rgba(255,255,255,0.5);
+    font-size: 16px;
+    font-weight: 500;
+
+    padding: 4px 12px;
+    border: 1px solid rgba(255,255,255,1);
     border-radius: 12px;
-    font-size: 18px;
-    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: not-allowed;
+}
+.role:hover {
+    background: #7b2ff7;
+    color: #09021C;
+    border: 1px solid #7b2ff7;
+}
+
+.bio {
+    margin: 20px 0 20px 0;
+
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.8;
 }
 
 .social-links {
     display: flex;
     gap: 16px;
+
+    margin-top: 40px;
 }
 .social-links a {
     color: rgba(255, 255, 255, 1);

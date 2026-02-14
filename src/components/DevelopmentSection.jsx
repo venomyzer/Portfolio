@@ -29,7 +29,7 @@ const projects = [
         title: "Portfolio Website",
         description: "A website crafted carefully, integrating design and code.",
         image: portfolioImg,
-        tags: ["HTML", "CSS", "Javascript", "React", "Figma"],
+        tags: ["HTML", "CSS", "Javascript", "React"],
         badge: "Live",
         badgeColor: "#FF2020"
     },
