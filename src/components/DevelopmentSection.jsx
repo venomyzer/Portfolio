@@ -21,6 +21,28 @@ const technologies = [
     {name: "Vite", icon: viteIcon},
 ];
 
+import portfolioImg from "../assets/images/ogpfp.png";
+import rfidImg from "../assets/images/ogpfp.png";
+import ProjectCard from "./ProjectCard.jsx";
+const projects = [
+    {
+        title: "Portfolio Website",
+        description: "A website crafted carefully, integrating design and code.",
+        image: portfolioImg,
+        tags: ["HTML", "CSS", "Javascript", "React", "Figma"],
+        badge: "Live",
+        badgeColor: "#FF2020"
+    },
+    {
+        title: "RFID Based Attendance",
+        description: "Built with ESP32 and stores real-time data in cloud.",
+        image: rfidImg,
+        tags: ["Arduino", "Cloud Syncing", "ESP32"],
+        badge: "Patent",
+        badgeColor: "#00DA0F"
+    }
+];
+
 export default function DevelopmentSection() {
     return (
         <section className="development">
@@ -43,7 +65,9 @@ export default function DevelopmentSection() {
                 <h2 className="projects-title">Projects:</h2>
 
                 <div className="projects-grid">
-                    Project Cards
+                    {projects.map((project, index) => (
+                        <ProjectCard key={index} {...project} />
+                    ))}
                 </div>
             </div>
 
