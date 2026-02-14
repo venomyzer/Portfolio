@@ -2,6 +2,7 @@
   min-height: 100vh;
   padding-top: 200px;
   padding-left: 200px;
+  padding-right: 200px;
 }
 .top-accent {
   position: fixed;
@@ -16,4 +17,9 @@
   );
   box-shadow: 0 5px 20px rgba(123, 47, 247, 0.7);
   z-index: 1000;
+}
+.container {
+  display: flex;
+  gap: 100px;
+  justify-content: space-between;
 }

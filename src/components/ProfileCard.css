@@ -66,3 +66,17 @@
     font-size: 18px;
     font-weight: 600;
 }
+
+.social-links {
+    display: flex;
+    gap: 16px;
+}
+.social-links a {
+    color: rgba(255, 255, 255, 1);
+    font-size: 32px;
+    transition: all 0.2s ease;
+}
+.social-links a:hover {
+    color: rgb(221, 202, 250, 1);
+    transform: translateY(-3px);
+}

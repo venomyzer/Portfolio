@@ -1,0 +1,33 @@
+.development-section {
+    max-width: 900px;
+    flex: 1;
+}
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+.tech-card {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+
+    background: #09021C;
+    border-radius: 16px;
+    padding: 20px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.tech-icon {
+    width: auto;
+    height: 36px;
+    object-fit: contain;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}

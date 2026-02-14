@@ -1,6 +1,9 @@
 import banner from "../assets/images/ogbbanner.png"
 import avatar from "../assets/images/ogpfp.png"
 
+import {FaGithub, FaTwitter, FaLinkedin, FaSpotify, FaBehanceSquare, FaDiscord} from "react-icons/fa";
+import {MdEmail} from "react-icons/md";
+
 import "./ProfileCard.css";
 
 export default function ProfileCard() {
@@ -27,9 +30,27 @@ export default function ProfileCard() {
                 <p className="bio">Hi there, I am Bibek, a self taught developer and designer. Welcome to my portfolio. Have a good time! 😉</p>
 
                 <div className="social-links">
-                    <span>Github</span>
-                    <span>LinkedIn</span>
-                    <span>Twitter</span>
+                    <a href="https://github.com/venomyzer" target="_blank" rel="noopener noreferrer">
+                        <FaGithub />
+                    </a>
+                    <a href="#">
+                        <FaLinkedin />
+                    </a>
+                    <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer">
+                        <FaTwitter />
+                    </a>
+                    <a href="#">
+                        <FaSpotify />
+                    </a>
+                    <a href="#">
+                        <FaBehanceSquare />
+                    </a>
+                    <a href="#">
+                        <FaDiscord />
+                    </a>
+                    <a href="mailto:your@email.com">
+                        <MdEmail />
+                    </a>
                 </div>
             </div>
         </aside>
