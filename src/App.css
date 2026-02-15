@@ -1,8 +1,9 @@
 .app {
   min-height: 100vh;
-  padding-top: 150px;
-  padding-left: clamp(20px, 10vw, 150px);
-  padding-right: clamp(20px, 10vw, 150px);
+  padding-top: clamp(20px, 10vw, 90px);
+  padding-left: clamp(10px, 10vw, 150px);
+  padding-right: clamp(10px, 10vw, 150px);
+  padding-bottom: clamp(20px, 10vw, 90px);
 }
 
 .top-accent {

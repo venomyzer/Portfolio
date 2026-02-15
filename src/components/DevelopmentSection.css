@@ -8,18 +8,20 @@
     }
 }
 .dev-header h1{
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 700;
 
     margin: -10px 0 10px 0;
 }
 .dev-header h2 {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 500;
     opacity: 0.5;
 
     margin-bottom: 20px;
 }
+
+
 .tech-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -41,6 +43,7 @@
     align-items: center;
     text-align: center;
     justify-content: space-between;
+    font-size: clamp(0.8rem, 3.9vw, 1rem);
 
     background: #09021C;
     border-radius: 16px;
@@ -50,7 +53,7 @@
 }
 .tech-icon {
     width: auto;
-    height: 36px;
+    height: clamp(1.25rem, 5.25vw, 2.25rem);
     object-fit: contain;
 }
 
@@ -72,5 +75,16 @@
 @media (max-width: 1645px) {
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 497px) {
+    .dev-header h1{
+        font-size: 2rem;
+    }
+    .dev-header h2 {
+        font-size: 1.2rem;
+    }
+    .projects-title {
+        font-size: 1.2rem;
     }
 }
