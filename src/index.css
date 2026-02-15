@@ -1,5 +1,7 @@
 :root {
   --sf-pro: "SF Pro", system-ui, sans-serif;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
 }
 
 * {
@@ -9,10 +11,53 @@
 }
 
 body {
+  cursor: none;
+
   font-family: var(--sf-pro);
   background-color: rgba(3, 0, 12, 1);
   color: white;
 }
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+
+  background: radial-gradient(
+    32px circle at var(--mouse-x) var(--mouse-y), rgba(123, 47, 247, 0.15), transparent 80%
+  );
+  transition: background 0.05s ease;
+}
+
+.custom-cursor {
+  left: 50%;
+  top: 50%;
+  position: fixed;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+
+  background: rgba(26, 10, 58, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  border: 1px solid rgba(123, 47, 247, 0.3);
+
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+
+  transition: transform 0.1s ease;
+  z-index: 9999;
+}
+@media (pointer: coarse) {
+  .custom-cursor {
+    display: none;
+  }
+  body {
+    cursor: auto;
+  }
+}
+
 
 
 

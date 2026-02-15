@@ -54,7 +54,7 @@ export default function DevelopmentSection() {
 
             <div className="tech-grid">
                 {technologies.map((tech, index) => (
-                    <div key={index} className="tech-card">
+                    <div key={index} className="tech-card" style={{ animationDelay: `${1.5 + index * 0.1}s` }}>
                         <img src={tech.icon} alt={tech.name} className="tech-icon" />
                         {tech.name}
                     </div>

@@ -12,15 +12,29 @@
     font-weight: 700;
 
     margin: -10px 0 10px 0;
+
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeDown1 0.8s ease forwards;
+    animation-delay: 0.6s;
+}
+@keyframes fadeDown1 {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 .dev-header h2 {
     font-size: 1.5rem;
     font-weight: 500;
-    opacity: 0.5;
 
     margin-bottom: 20px;
-}
 
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeDown2 0.8s ease forwards;
+    animation-delay: 0.9s;
+}
 
 .tech-grid {
     display: grid;
@@ -48,8 +62,11 @@
     background: #09021C;
     border-radius: 16px;
     padding: 20px;
-    transition: all 0.2s ease;
-    cursor: pointer;
+    cursor: none;
+
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: fadeUp 0.6s ease forwards;
 }
 .tech-icon {
     width: auto;
@@ -63,10 +80,22 @@
 .projects-title {
     font-size: 24px;
     font-weight: 500;
-    opacity: 0.5;
 
     margin-bottom: 20px;
+
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeDown2 0.8s ease forwards;
+    animation-delay: 2.5s;
 }
+
+@keyframes fadeDown2 {
+    to {
+        opacity: 0.5;
+        transform: translateY(0);
+    }
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
