@@ -36,19 +36,19 @@ export default function ProfileCard() {
                     <a href="#">
                         <FaLinkedin />
                     </a>
-                    <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer">
+                    <a href="https://twitter.com/venomyzertm" target="_blank" rel="noopener noreferrer">
                         <FaTwitter />
                     </a>
-                    <a href="#">
+                    <a href="https://open.spotify.com/user/nqxn2nob7aksazkrm0ssjva57" target="_blank" rel="noopener noreferrer">
                         <FaSpotify />
                     </a>
-                    <a href="#">
+                    <a href="https://www.behance.net/venomyzer" target="_blank" rel="noopener noreferrer">
                         <FaBehanceSquare />
                     </a>
-                    <a href="#">
+                    <a href="https://discord.com/users/1135850360892829897" target="_blank" rel="noopener noreferrer">
                         <FaDiscord />
                     </a>
-                    <a href="mailto:your@email.com">
+                    <a href="mailto:bibekdastm@gmail.com" target="_blank" rel="noopener noreferrer">
                         <MdEmail />
                     </a>
                 </div>

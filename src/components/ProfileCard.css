@@ -1,6 +1,6 @@
 .profile-card {
     width: 400px;
-    background: #09021C;
+    background: var(--box-color);
     border-radius: 24px;
     overflow: hidden;
     position: relative;
@@ -47,7 +47,7 @@
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #09021C;
+    border: 2px solid var(--box-color);
 }
 .status-dot {
     position: absolute;
@@ -87,15 +87,15 @@
     font-weight: 500;
 
     padding: 8px 12px;
-    border: 1px solid rgba(255,255,255,1);
+    border: 1px solid var(--text-color);
     border-radius: 12px;
     transition: all 0.3s ease;
     cursor: not-allowed;
 }
 .role:hover {
-    background: #7b2ff7;
-    color: #09021C;
-    border: 1px solid #7b2ff7;
+    background: var(--accent-color);
+    color: var(--box-color);
+    border: 1px solid var(--accent-color);
 }
 
 .bio {
@@ -115,13 +115,13 @@
     margin-top: 40px;
 }
 .social-links a {
-    color: rgba(255, 255, 255, 1);
+    color: var(--text-color);
     font-size: clamp(20px, 6vw, 32px);
     transition: all 0.2s ease;
 
     cursor: none;
 }
 .social-links a:hover {
-    color: rgb(221, 202, 250, 1);
+    color: var(--text-color);
     transform: translateY(-3px);
 }

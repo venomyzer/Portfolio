@@ -7,7 +7,7 @@ import DevelopmentSection from "./components/DevelopmentSection.jsx";
 function App() {
 
     useEffect(() => {
-        // If device doesn't have a fine pointer, exit
+
         if (!window.matchMedia("(pointer: fine)").matches) {
             return;
         }
@@ -56,6 +56,9 @@ function App() {
             <div className="container">
                 <ProfileCard />
                 <DevelopmentSection />
+            </div>
+            <div className="spotify">
+
             </div>
         </div>
     );

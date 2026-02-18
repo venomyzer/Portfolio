@@ -2,6 +2,12 @@
   --sf-pro: "SF Pro", system-ui, sans-serif;
   --mouse-x: 50%;
   --mouse-y: 50%;
+
+  /*colors*/
+  --bg-color: #000000;
+  --box-color: #09021C;
+  --accent-color: #7300FF;
+  --text-color: #ffffff;
 }
 
 * {
@@ -10,12 +16,19 @@
   box-sizing: border-box;
 }
 
+body.light {
+  --bg-color: #ffffff;
+  --box-color: #eeeeee;
+  --accent-color: #7300FF;
+  --text-color: #000000;
+}
+
 body {
   cursor: none;
 
-  font-family: var(--sf-pro);
-  background-color: rgba(3, 0, 12, 1);
-  color: white;
+  font-family: var(--sf-pro), serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 body::before {
   content: "";
