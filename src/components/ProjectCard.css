@@ -2,7 +2,7 @@
     display: flex;
     gap: 24px;
     background-color: var(--bg-color);
-    border: 1px solid var(--accent-color);
+    border: 1px solid var(--accent-color-faded);
     border-radius: 12px;
     padding-right: 20px;
     position: relative;
@@ -15,7 +15,7 @@
     animation-delay: 2.7s;
 }
 .project-card:hover {
-    border: 1px solid rgba(123, 47, 247, 1);
+    border: 1px solid var(--accent-color);
 }
 @keyframes fadeUp {
     to {
@@ -80,14 +80,14 @@
     border-radius: 16px;
     font-size: clamp(0.75rem, 3vw, 1rem);
 
-    border: 1px solid rgba(115, 0, 255, 0.5);
-    color: rgba(115, 0, 255, 0.5);
+    border: 1px solid var(--accent-color-faded);
+    color:var(--accent-color-faded);
 
     transition: all 0.3s ease;
 }
 .project-tag:hover {
-    border: 1px solid rgba(123, 47, 247, 1);
-    color: rgba(115, 0, 255, 1);
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
 }
 
 .project-badge {

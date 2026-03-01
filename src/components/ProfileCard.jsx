@@ -17,6 +17,11 @@ export default function ProfileCard() {
                 <div className="avatar-wrapper">
                     <img src={avatar} alt="PFP" className="avatar"/>
                     <span className="status-dot"></span>
+                    <div className="status-bubble-wrapper">
+                        <div className="bubble-dot bubble-dot-1"></div>
+                        <div className="bubble-dot bubble-dot-2"></div>
+                        <div className="status-bubble">grinding DSA problems...</div>
+                    </div>
                 </div>
 
                 <h1 className="name">Venomyzer</h1>
@@ -33,7 +38,7 @@ export default function ProfileCard() {
                     <a href="https://github.com/venomyzer" target="_blank" rel="noopener noreferrer">
                         <FaGithub />
                     </a>
-                    <a href="#">
+                    <a href="https://www.linkedin.com/in/venomyzer/">
                         <FaLinkedin />
                     </a>
                     <a href="https://twitter.com/venomyzertm" target="_blank" rel="noopener noreferrer">

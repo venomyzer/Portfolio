@@ -4,9 +4,11 @@
   --mouse-y: 50%;
 
   /*colors*/
-  --bg-color: #000000;
-  --box-color: #09021C;
-  --accent-color: #7300FF;
+  --bg-color: #060C00;
+  --box-color: #0D1B00;
+  --accent-color: #77FF00;
+  --accent-color-two: #00FF09;
+  --accent-color-faded: rgba(0, 255, 0, 0.4);
   --text-color: #ffffff;
 }
 
@@ -19,7 +21,7 @@
 body.light {
   --bg-color: #ffffff;
   --box-color: #eeeeee;
-  --accent-color: #7300FF;
+  --accent-color: #77FF00;
   --text-color: #000000;
 }
 
@@ -37,7 +39,7 @@ body::before {
   pointer-events: none;
 
   background: radial-gradient(
-    32px circle at var(--mouse-x) var(--mouse-y), rgba(123, 47, 247, 0.15), transparent 80%
+    32px circle at var(--mouse-x) var(--mouse-y), rgb(13, 27, 0), transparent 80%
   );
   transition: background 0.05s ease;
 }
@@ -50,11 +52,11 @@ body::before {
   height: 16px;
   border-radius: 50%;
 
-  background: rgba(26, 10, 58, 0.4);
+  background: rgba(119, 255, 0, 0.02);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 
-  border: 1px solid rgba(123, 47, 247, 0.3);
+  border: 1px solid rgba(119, 255, 0, 0.3);
 
   pointer-events: none;
   transform: translate(-50%, -50%);

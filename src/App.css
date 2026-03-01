@@ -14,10 +14,10 @@
   height: 6px;
   background: linear-gradient(
           90deg,
-          #7b2ff7,
-          #5500ff
+          var(--accent-color),
+          var(--accent-color-two)
   );
-  box-shadow: 0 5px 20px rgba(123, 47, 247, 0.7);
+  box-shadow: 0 5px 20px rgba(119, 255, 0, 0.8);
   z-index: 1000;
 }
 
@@ -25,6 +25,7 @@
   display: flex;
   gap: 80px;
   justify-content: center;
+  align-items: flex-start;
 }
 @media (max-width: 1400px) {
   .container {

@@ -21,8 +21,9 @@ const technologies = [
     {name: "Vite", icon: viteIcon},
 ];
 
-import portfolioImg from "../assets/images/ogpfp.png";
-import rfidImg from "../assets/images/ogpfp.png";
+import portfolioImg from "../assets/images/portfolio.png";
+import rfidImg from "../assets/images/rfid.png";
+import swapdImg from "../assets/images/swapd.png";
 import ProjectCard from "./ProjectCard.jsx";
 const projects = [
     {
@@ -39,7 +40,15 @@ const projects = [
         image: rfidImg,
         tags: ["Arduino", "Cloud Syncing", "ESP32"],
         badge: "Patent",
-        badgeColor: "#00DA0F"
+        badgeColor: "#0080ff"
+    },
+    {
+        title: "Swap'D",
+        description: "A social media for developers to barter their skills",
+        image: swapdImg,
+        tags: ["React", "MongoDB", "NodeJS"],
+        badge: "Group (Ongoing)",
+        badgeColor: "#8f00be"
     }
 ];
 

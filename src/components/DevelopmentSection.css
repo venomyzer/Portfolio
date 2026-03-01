@@ -59,7 +59,7 @@
     justify-content: space-between;
     font-size: clamp(0.8rem, 3.9vw, 1rem);
 
-    background: #09021C;
+    background: var(--box-color);
     border-radius: 16px;
     padding: 20px;
     cursor: none;
