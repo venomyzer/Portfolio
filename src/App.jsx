@@ -1,13 +1,13 @@
 import './App.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import ProfileCard from "./components/ProfileCard";
 import DevelopmentSection from "./components/DevelopmentSection.jsx";
 
 function App() {
+    const [expanded, setExpanded] = useState(false);
 
     useEffect(() => {
-
         if (!window.matchMedia("(pointer: fine)").matches) {
             return;
         }
@@ -53,13 +53,15 @@ function App() {
             <div className="custom-cursor"></div>
 
             <div className="top-accent"></div>
-            <div className="container">
-                <ProfileCard />
-                <DevelopmentSection />
+            <div className={`container ${expanded ? "container--expanded" : ""}`}>
+                <ProfileCard expanded={expanded} />
+                <DevelopmentSection
+                    expanded={expanded}
+                    onExpand={() => setExpanded(true)}
+                    onCollapse={() => setExpanded(false)}
+                />
             </div>
-            <div className="spotify">
-
-            </div>
+            <div className="spotify"></div>
         </div>
     );
 }

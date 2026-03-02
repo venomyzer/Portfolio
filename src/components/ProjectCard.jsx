@@ -1,6 +1,5 @@
 import "./ProjectCard.css";
 
-
 export default function ProjectCard ({image, title, description, tags, badge, badgeColor}) {
     return (
         <div className="project-card">

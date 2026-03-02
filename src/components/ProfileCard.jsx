@@ -6,9 +6,9 @@ import {MdEmail} from "react-icons/md";
 
 import "./ProfileCard.css";
 
-export default function ProfileCard() {
+export default function ProfileCard({ expanded }) {
     return (
-        <aside className="profile-card">
+        <aside className={`profile-card ${expanded ? "profile-card--hidden" : ""}`}>
 
             <div className="banner-wrapper">
                 <img src={banner} alt="Banner" className="banner-img" />

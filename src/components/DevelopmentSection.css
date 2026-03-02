@@ -77,16 +77,39 @@
 .projects-section {
     margin-top: 20px;
 }
-.projects-title {
-    font-size: 24px;
-    font-weight: 500;
 
+.projects-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
     margin-bottom: 20px;
+    justify-content: space-between;  /* ← add this */
 
     opacity: 0;
     transform: translateY(-10px);
     animation: fadeDown2 0.8s ease forwards;
     animation-delay: 2.5s;
+}
+
+.projects-title {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.view-more-link {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--accent-color);
+    opacity: 0.7;
+    cursor: none;
+    transition: opacity 0.2s ease;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.view-more-link:hover {
+    opacity: 1;
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 @keyframes fadeDown2 {
@@ -106,6 +129,30 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* Extra projects — always in DOM, toggled via CSS only */
+.projects-extra {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
+}
+.projects-extra.visible {
+    max-height: 600px;
+    opacity: 1;
+    margin-top: 32px;
+    padding-top: 16px;  /* ← add this */
+}
+@media (max-width: 1645px) {
+    .projects-extra {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 497px) {
     .dev-header h1{
         font-size: 2rem;

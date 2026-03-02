@@ -3,12 +3,31 @@
     background: var(--box-color);
     border-radius: 24px;
     overflow: hidden;
-    position: relative;
+    position: sticky;           /* ← add this */
+    top: clamp(20px, 10vw, 90px); /* ← add this */
+    align-self: flex-start;     /* ← add this */
 
     opacity: 0;
     transform: translateY(30px);
     animation: fadeUp 0.8s ease forwards;
+}@media (max-width: 1400px) {
+    .profile-card {
+        width: 100%;
+        position: static;  /* ← add this */
+    }
 }
+
+/* Hidden / collapsed state */
+.profile-card--hidden {
+    max-width: 0 !important;
+    opacity: 0 !important;
+    transform: scale(0.85) !important;
+    pointer-events: none;
+    overflow: hidden;
+    /* Override the entry animation when hidden */
+    animation: none;
+}
+
 @keyframes fadeUp {
     to {
         opacity: 1;
@@ -18,6 +37,12 @@
 @media (max-width: 1400px) {
     .profile-card {
         width: 100%;
+        max-width: 100%;
+    }
+    .profile-card--hidden {
+        max-width: 0 !important;
+        max-height: 0 !important;
+        padding: 0 !important;
     }
 }
 
@@ -127,7 +152,7 @@
 
 .name {
     font-size: clamp(1.3rem,2vw,1.8rem);
-    font-weight: 700    ;
+    font-weight: 700;
 
     margin-top: 16px;
 }
@@ -172,7 +197,7 @@
 }
 
 .social-links {
-    display: flex;]
+    display: flex;
     flex-wrap: wrap;
     gap: clamp(8px, 3.5vw, 16px);
     align-items: flex-start;

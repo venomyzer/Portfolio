@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./DevelopmentSection.css";
 
 import htmlIcon from "../assets/icons/Html.svg";
@@ -8,7 +9,6 @@ import figmaIcon from "../assets/icons/Figma.svg";
 import javaIcon from "../assets/icons/Java.svg";
 import gitIcon from "../assets/icons/Git.svg";
 import viteIcon from "../assets/icons/Vite.svg";
-
 
 const technologies = [
     {name: "HTML", icon: htmlIcon},
@@ -25,7 +25,8 @@ import portfolioImg from "../assets/images/portfolio.png";
 import rfidImg from "../assets/images/rfid.png";
 import swapdImg from "../assets/images/swapd.png";
 import ProjectCard from "./ProjectCard.jsx";
-const projects = [
+
+const mainProjects = [
     {
         title: "Portfolio Website",
         description: "A website crafted carefully, integrating design and code.",
@@ -42,6 +43,9 @@ const projects = [
         badge: "Patent",
         badgeColor: "#0080ff"
     },
+];
+
+const extraProjects = [
     {
         title: "Swap'D",
         description: "A social media for developers to barter their skills",
@@ -53,6 +57,8 @@ const projects = [
 ];
 
 export default function DevelopmentSection() {
+    const [showMore, setShowMore] = useState(false);
+
     return (
         <section className="development">
 
@@ -71,15 +77,30 @@ export default function DevelopmentSection() {
             </div>
 
             <div className="projects-section">
-                <h2 className="projects-title">Projects:</h2>
+
+                <div className="projects-header">
+                    <h2 className="projects-title">Projects:</h2>
+                    <span
+                        className="view-more-link"
+                        onClick={() => setShowMore(prev => !prev)}
+                    >
+                        {showMore ? "View Less ↙" : "View More ↗"}
+                    </span>
+                </div>
 
                 <div className="projects-grid">
-                    {projects.map((project, index) => (
+                    {mainProjects.map((project, index) => (
                         <ProjectCard key={index} {...project} />
                     ))}
                 </div>
-            </div>
 
+                <div className={`projects-extra${showMore ? " visible" : ""}`}>
+                    {extraProjects.map((project, index) => (
+                        <ProjectCard key={index} {...project} />
+                    ))}
+                </div>
+
+            </div>
         </section>
     );
 }
